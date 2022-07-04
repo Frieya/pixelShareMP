@@ -5,7 +5,7 @@
                     <form method="post" action="/api/changePhoto" enctype="multipart/form-data">
                     <div style="height:90%">
                             <label for="fileUpload" style="align-self: center;" id="imageUpload">
-                                <img id="imgUpload"  alt="" src="..\images\profilePicture\image.png" class="avatar">
+                                <img id="imgUpload"  alt="" src="..\images\profilePicture/{{user.userImg}}" class="avatar">
                             </label>
                             <input type="file" name="image" id="fileUpload" accept="image/jpeg, image/png" hidden>
                     </div>
@@ -25,26 +25,48 @@
     
                               <div class="input-box">
                                   <span class="details">Full Name</span>
-                                  <input type="text">
+                                  <input type="text" name="full_name" value="{{user.full_name}}">
                               </div>
     
                               <div class="input-box">
                                 <span class="details"> Email (Username)</span>
-                                <input type="text">
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Birthday</span>
-                                    <input type="date" placeholder="">
-                                </div>
-    
+                                <input type="text" name="email" value="{{user.email}}">
+                            </div>
                                 
-    
                           </div>
     
                             <div class="save">
                                 <input type="submit" value="SAVE">
                             </div>
     
+                       </form>
+
+
+                       <form action="#">
+                          <div class="user-details">
+
+                              <div class="input-box">
+                                <span class="details">Old Password</span>
+                                <input type="text" id="username" name="oldPassword">
+                                </div>
+
+                                <div class="input-box">
+                                    <span class="details">New Password</span>
+                                    <input type="password" id="password" name="newPassword">
+                                </div>
+
+                                <div class="input-box">
+                                    <span class="details">Confirm Password</span>
+                                    <input type="password" id="conf_password" name="confirmPassword">
+                                </div>
+
+
+                          </div>
+
+                            <div class="save">
+                                <input type="submit" value="SAVE">
+                            </div>
+
                        </form>
                    </div>
     

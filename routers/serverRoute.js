@@ -24,7 +24,7 @@ route.get('/setting', function(req, res){
 })
 
 route.get('/settings/:id', function (req, res) {
-    console.log()
+    res.render('changeSetting', {user: req.user})
 })
 
 route.get('/profile/:id', async (req, res) => {
@@ -73,8 +73,6 @@ route.get('/home', async(req, res)=>{
         else{num = num +1}
         
     }
-   
-
 
     var firstThree = chunks[0]
     var middleThree = chunks[1]
