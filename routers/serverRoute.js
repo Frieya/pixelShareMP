@@ -8,6 +8,7 @@ const  db  = require('../model_db/db');
 const route = express.Router();
 
 const Post = require("../model_db/postModel")
+const User = require("../model_db/userModel")
 route.get('/', controller.getIndex);
 
 
@@ -81,4 +82,15 @@ route.get('/home', async(req, res)=>{
     res.render('allPost', {user: req.user, postOne: firstThree, postTwo: middleThree, postThree: secondThree})
 });
 
+
+route.post('/api/changePhoto', function (req, res) {
+    let {image} = req.files
+    var imgFilename = new Date().getTime()+"_"+image.name
+    image.mv(path.resolve(__dirname,'../public/images/profilePicture', imgFilename), async (err)=>{
+        db.updateOne(User,{_id: mongoose.Types.ObjectId(req.user._id)},{userImg: imgFilename}, (err)=>{
+            res.redirect('/settings/'+req.user._id)
+        })
+        
+    })
+})
 module.exports = route;
