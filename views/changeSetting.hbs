@@ -20,7 +20,7 @@
                <div class="right">
                    <div class="info">
                        <h3>User Information</h3>
-                       <form action="#">
+                       <form action="/api/changeUP" method="post" enctype="application/x-www-form-urlencoded">
                           <div class="user-details">
     
                               <div class="input-box">
@@ -30,19 +30,19 @@
     
                               <div class="input-box">
                                 <span class="details"> Email (Username)</span>
-                                <input type="text" name="email" value="{{user.email}}">
+                                <input type="text" name="username" value="{{user.username}}">
                             </div>
                                 
                           </div>
     
                             <div class="save">
-                                <input type="submit" value="SAVE">
+                                <input type="submit" value="SAVE" onclick="/logout">
                             </div>
     
                        </form>
 
 
-                       <form action="#">
+                       <form action="#" method="post">
                           <div class="user-details">
 
                               <div class="input-box">

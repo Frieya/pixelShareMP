@@ -20,9 +20,7 @@ route.get('/viewOwn', controller.getOwn);
 route.get('/viewOther', controller.getPost);
 route.get('/settings', controller.changeSetting);
 route.get('/goCreate', controller.redirectCreate);
-route.get('/setting', function(req, res){
-    res.render('changePassword')
-})
+
 
 route.get('/settings/:id', function (req, res) {
     res.render('changeSetting', {user: req.user})
@@ -74,7 +72,6 @@ route.get('/home', async(req, res)=>{
         else{num = num +1}
         
     }
-
     var firstThree = chunks[0]
     var middleThree = chunks[1]
     var secondThree = chunks[2]
@@ -93,4 +90,16 @@ route.post('/api/changePhoto', function (req, res) {
         
     })
 })
+
+route.post('/api/changeUP', function(req, res){
+    console.log(req.body)
+    db.updateOne(User,{_id: mongoose.Types.ObjectId(req.user._id)},req.body, (err)=>{
+        res.redirect('/settings/'+req.user._id)
+    })
+})
+
+route.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/'); 
+  });
 module.exports = route;
