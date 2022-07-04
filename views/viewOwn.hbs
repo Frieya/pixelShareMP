@@ -1,0 +1,75 @@
+{{>header activeUser}}
+<div class="wrapperView">
+            <div class="left">
+                <div >
+                    <img src="..\images\post/{{post.postImg}}" alt="Avatar" class="avatar">
+                </div>
+                
+            </div>
+
+           <div class="rightView">
+            
+        
+            <h1>{{post.postTitle}}</h1>
+            
+            
+            <div class="author">
+                <div>
+                <h3>-{{post.user.full_name}}</h3>
+                <p class="follower"> 20.2K Followers</p>
+                </div>
+
+            </div>
+
+
+
+            <h4>COMMENTS</h4>
+
+            <div class="comments">
+                <img src="..\images\profilePicture\image.png" alt="Profile" class="avatar">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="name"><b>randomuser</b></p>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="comm">This anime is so heart warming</p>
+                        </td>
+                    </tr>
+                    <tr class="reply">
+                        <td>
+                            <p class="date">3mos</p>
+                        </td>
+                        <td style="margin:0 10px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                              </svg>
+                        </td>
+                    </tr>
+                </table>  
+            </div>
+
+            <button class="see"><b>See More</b></button>
+
+            <div>
+                <table style="width:100%;">
+                    <tr style="width:100%">
+                        <td class="add-comm">
+                            <img src="..\images\profilePicture/{{activeUser.userImg}}" alt="Profile" class="avatar">
+                            <input type="text" placeholder="Add a comment">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="down">
+                            <button>Cancel</button>
+                            <button style="color: rgb(110, 110, 110);">Done</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+           </div>          
+</div>

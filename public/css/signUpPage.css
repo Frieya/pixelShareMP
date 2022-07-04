@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("bg_signup.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introductory {
+    color: #FFFFFF;
+    font-family: Barlow;
+    font-size: 80px;
+    text-align: center;   
+}
+
+#box {
+    background-color: beige;
+    padding: 10px 30px 10px 30px;
+    width: 500px;
+    height: 731px;
+    box-sizing: border-box;
+    padding: 70px 0;
+    text-align: center;
+}
+
+#welcome {
+    color: #76522D;
+    font-family: Barlow;
+    font-size: 56px;
+}
+
+#app_name {
+    color:#948C5D;
+    font-family: League Spartan;
+    font-size: 88px;
+    margin-bottom: 25px;
+}
+
+.textbox {
+    color: #948C5D;
+    font-family: Roboto;
+    font-size: 23px;
+    border-color: #514C42;
+    border-width: 6px;
+    border-radius: 10px;
+    height: 45px;
+    width: 330px;
+    margin-bottom: 5px;
+}
+
+#button {
+    color: #FFFFFF;
+    background-color: #514C42;
+    font-family: League Spartan;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 10px;
+}

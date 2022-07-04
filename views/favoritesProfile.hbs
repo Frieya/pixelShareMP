@@ -1,0 +1,98 @@
+{{>header user}}
+        <style>
+            .btn_addpost{
+                
+                color:#76522d;
+                border-color: rgb(209, 209, 209);
+                background-color: rgb(209, 209, 209);
+            }
+
+             .btn_addpost:hover{
+                color: #ffffff;
+                background-color:#76522d;
+                border-color: #76522d;
+            }
+        </style>
+    
+        <div id="mainContentProfile">
+            <div id="profileContent">
+               <div style="display: flex; justify-content: center;">
+                   <img class="profile_img" src="..\images\profilePicture/image.png" alt="">
+               </div>
+               
+               <div style="margin-top: 10px;">
+                   <div class="infoBox">
+                        <h1 id="accountName">Juan Dela Cruz</h1>
+                   </div>
+                   <div class="infoBox">
+                        <p id="userDescription">living in the harsh environment of the Philippines</p>
+                   </div>
+                   
+               </div>
+
+                <div id="followContent">
+                    <p id="followers">  <span id="followerCount">10</span> FOLLOWERS</p>
+                    <p id="followings"> <span id="followingCount">20</span> FOLLOWINGS  </p>
+                </div>
+
+               
+                
+                <div style="display: flex; justify-content: center; margin-top: 10px;">
+                    <a href="profilePage.html">
+                    <button type="button" class="btn_addpost btn" id="backProfileButton">
+                       <span  style="font-size: 15px; font-weight: BOLD; color:#76522D; text-decoration: none;"> BACK TO PROFILE </span> </a>          
+                    </button>
+                    </a>
+                </div>
+                
+
+            </div>
+
+            <separator></separator> 
+            
+
+            <div style="width:60%">
+                <div class="workContent">
+                    <h1 id="text_MyWorks">Favorites</h1>
+                    
+                </div>
+                <div id="imageContentProfile">
+                    <div id="row1" class="row_postProfile">
+                        <div class="postsProfile">
+                            <div class="post_box">
+                                <img class="post_img" src="..\images\post\theGreatWave.jpg" alt="">
+                                <div class="img_shadeProfile"></div>
+                                <svg class="optionButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16" >
+                                    <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+                                </svg>
+                            </div> 
+                        </div>
+                    </div>
+                    
+                    <div id="row2" class="row_postProfile">
+                        <div class="postsProfile">
+                            <div class="post_box">
+                                <img class="post_img" src="..\images\post\abstract.jpg" alt="">
+                                <div class="img_shadeProfile"></div>
+                                <svg class="optionButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16" >
+                                    <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+                                </svg>
+                            </div> 
+    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div id="promptLayer">
+            <div class="promptDelete">
+                <h2>Delete Post?</h2>
+                <div>
+                    <p>This action cannot be undone and it will be remove from your profile and any page from this site thereon.</p>
+                </div>
+                <div class="d-grid gap-3 col-9 mx-auto">
+                    <button id="continueDelete" type="button" class="btn btn-outline-danger">Continue</button>
+                    <button id="cancelDelete" type="button" class="btn btn-outline-dark">Cancel</button>
+                </div>
+               

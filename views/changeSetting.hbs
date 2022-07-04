@@ -1,0 +1,53 @@
+        {{>header user}}
+        <div style="display:flex;justify-content:center;margin-top:5%;">
+            <div class="wrapperInfo">
+                <div class="leftInfo">
+                    <form method="post" action="/api/changePhoto" enctype="multipart/form-data">
+                    <div style="height:90%">
+                            <label for="fileUpload" style="align-self: center;" id="imageUpload">
+                                <img id="imgUpload"  alt="" src="..\images\profilePicture\image.png" class="avatar">
+                            </label>
+                            <input type="file" name="image" id="fileUpload" accept="image/jpeg, image/png" hidden>
+                    </div>
+                    <button class="button" type="submit"><b>UPLOAD PHOTO</b></button>
+                    </form>
+                    <button class="logout">
+                        <a href="startPage.html" style="text-decoration: none; color: #76522D;">Log Out</a>
+                    </button>
+    
+                </div>
+    
+               <div class="right">
+                   <div class="info">
+                       <h3>User Information</h3>
+                       <form action="#">
+                          <div class="user-details">
+    
+                              <div class="input-box">
+                                  <span class="details">Full Name</span>
+                                  <input type="text">
+                              </div>
+    
+                              <div class="input-box">
+                                <span class="details"> Email (Username)</span>
+                                <input type="text">
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Birthday</span>
+                                    <input type="date" placeholder="">
+                                </div>
+    
+                                
+    
+                          </div>
+    
+                            <div class="save">
+                                <input type="submit" value="SAVE">
+                            </div>
+    
+                       </form>
+                   </div>
+    
+               </div>
+           </div>
+        </div>

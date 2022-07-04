@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FFF9F2;
+    background-image: url("../images/bg_1stpage.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+h2 {
+    color: #76522D;
+    font-family: League Spartan;
+    font-size: 64px;
+    position: absolute;
+    top: 8px;
+    left: 32px;
+}
+
+#introductory_1 {
+    color: #948C5D;
+    font-family: Barlow;
+    font-size: 104px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 75px;
+}
+
+#introductory_2 {
+    color: #76522D;
+    font-family: Barlow;
+    font-size: 88px;
+    text-align: center;
+}
+
+#join {
+    color: #FFC106;
+    font-family: Quicksand;
+    font-size: 25px;
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 145px;
+}
+
+#log_in {
+    color: #76522D;
+    font-family: Quicksand;
+    font-size: 25px;
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 46px;
+}

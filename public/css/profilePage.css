@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+#mainContentProfile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0px 40px;
+    background-color: #fff9f2;
+}
+
+/*------------------LAYER SECTION----------------*/
+#mainLayer {
+    z-index: 0;
+    top: 0;
+}
+
+#promptLayer{
+    z-index: 30;
+    /* background-color: #000000ba; */
+    top:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;}
+
+
+ 
+
+#imageContentProfile {
+    height: inherit;
+    width: 85%;
+    display: flex;
+    background-color: #fff9f2;
+    padding-right: 20%;}
+
+#profileContent {
+    margin-top: 20px;
+    height: 100%;
+    width: 40%;position:sticky;
+    top: 120px;
+    
+}
+
+#text_recommend {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.postsProfile {
+    width: 95%;
+    height:auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post_box {
+    width: 100%;
+    height: auto;display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+}
+
+.img_shadeProfile{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.img_shadeProfile:hover {
+    background: rgb(0 0 0 / 35%);
+   
+}
+
+.optionButton{
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;/* left: 92.5%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: -10;
+    border: solid 1px transparent;
+    border-radius: 15px;
+    padding: 3px;
+    cursor:pointer;
+}
+
+.img_shadeProfile:hover + .optionButton, .optionButton:hover{
+        background-color: white;
+        color: black;
+        z-index: 1;
+        border-color: white;
+        cursor:pointer;
+    }
+
+
+
+.row_postProfile {
+    min-width: 50%;
+    height: inherit;
+}
+
+.post_img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 10px;
+    /* margin-bottom: 5px; */
+    max-width: 100%;
+    max-height: 100%;}
+
+.img_info{
+    margin-left: 5px;
+}
+
+.OP {
+    height: 20px;
+    display: flex;}
+
+.imageOP {
+    height: inherit;
+    width: 20px;
+margin-right: 5px;}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.color_brown {
+    color: rgb(118,82,45);
+}
+
+
+.profile_img {
+   width: 50%;
+   /* height: 50%; */
+   border-radius: 50%; 
+   margin: 0 100px;}
+
+#accountName {
+    text-align: center;
+    color: #76522d;
+    
+    font-family: Barlow, sans-serif;
+}
+
+
+#userDescription {
+    text-align: center;
+    color: #76522d;
+    font-family: Quicksand, sans-serif;
+    font-weight: 200px;
+/* font-size: 15px; */}
+
+.infoBox {
+    margin: -5px 30px;
+}
+
+
+separator {
+    border-right: 5px solid #948C5D;
+    /* min-height: 500px; */
+    /* height: 800px; */margin-right: 30px;
+    position: sticky;
+    top: 110px;
+}
+
+
+/*----------FOLLOW CONTENT SECTION-----------*/
+#followContent {
+    padding: 10px 0;
+    margin: -15px 0 -10px;display: flex;
+    justify-content: center;}
+
+#followers, #followings {
+    text-align: center;
+    color: #76522d;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    width: 150px;
+    
+}
+#followerCount, #followingCount {
+    color: #948c5d;
+}
+
+/*----------WORK CONTENT SECTION-----------*/
+
+.workContent {
+    position: sticky;
+    top: 90px;
+    background-color: #fff9f2;
+    padding: 20px 0 10px;
+    display: flex;
+    z-index: 10;
+/* height: 8%; */}
+
+#text_MyWorks {
+    
+    font-family: sans-serif;
+    color: #948c5d;
+    font-weight: bold;
+    margin-right: 20px;
+font-size: 50px;}
+
+/*------------------------DELETE PROMPT------------------------*/
+.promptDelete {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+    top: 30%;
+    position: sticky;
+/* margin: 2%; */padding: 25px 2%;}
+
+
+.profile_pic{
+    border-radius: 50%;
+    border: 3px solid;
+    margin-top: 5px;
+    border-color: #FFF9F2;
+    height: 40px;
+box-sizing: content-box;}
+.menu_button {
+    margin-left: 10px;
+}

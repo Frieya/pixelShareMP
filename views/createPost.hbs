@@ -1,0 +1,41 @@
+{{>header user}}
+        
+        <form method="post" action="/api/create" enctype="multipart/form-data">
+        <div style="width: 100%; height: 100%; display: flex; justify-content: center;">
+            
+                <div class="wrapperCreate">
+                    <div class="left">
+                        <div style="height:90%">
+                            <label for="fileUpload" style="align-self: center;" id="imageUpload">
+                                <h1 id="flup">File Upload</h1>
+                                <img id="imgUpload"  alt="" hidden>
+                            </label>
+                            <input type="file" name="image" id="fileUpload" accept="image/jpeg, image/png" hidden>
+                            <p>Recommendation: Use high-quality .jpg or .png files less than 10mb</p>
+                        </div>
+                        <input class="publish" value="Publish" type="submit">
+                    </div>
+        
+                    <div class="right">
+                        <h3 style="font-size:40px;">Create Post</h3>
+                        <div class="title">
+                            <input type="text" name="title" id="title" placeholder="Add your Title">
+                        </div>
+        
+                        <div class="author">
+                            <img src="../images/profilePicture/image.png" alt="avatar">
+                            <div class="name">
+                                <h4>{{user.full_name}}</h4>
+                            </div>
+                        </div>
+        
+                        <div class="description">
+                            <input type="text" name="description" placeholder="Tell everyone what your Post is about">
+                        </div>
+        
+                        
+                    </div> 
+                </div>
+        </div>
+        </form>
+       

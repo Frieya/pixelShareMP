@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+#mainContent {
+    display: flex;
+    justify-content: center;width: 100%;
+    margin: 0px 0%;
+}
+
+#imageContent {
+    height: inherit;
+    width: 70%;
+    display: flex;
+    margin-top: 20px;
+
+}
+
+#recommendationContent {
+    margin-top: 20px;
+    width: 20%;
+    height: 400px;
+}
+
+#text_recommend {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.posts {
+    width: 95%;
+    height:auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post_box {
+    width: inherit;
+    height: auto;display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.row_post {
+    width: 40%;
+    height: inherit;
+}
+
+.post_img {
+    width: auto;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 100%;
+    max-height: 100%;}
+
+.img_info{
+    margin-left: 5px;
+}
+
+.OP {
+    height: 20px;
+    display: flex;}
+.imageOP {
+    height: inherit;
+    width: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: #FFF9F2;}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin-bottom: 0;}
+
+.color_brown {
+    color: rgb(118,82,45);
+}
+
+
+/*https://medium.com/@dylanon/throwing-shade-how-to-shade-images-in-html-css-9d37b17b9d10*/
+.recommended_box {
+    width: 250px;
+    height: 175px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.bg_recommend {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.genre{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Nunito', sans-serif;
+transform: translate(-50%, -50%);}
+
+.img_shade {
+    height: 100%;
+    width: 100%;
+    background: rgb(0 0 0 / 65%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.profile_pic{
+    border-radius: 50%;
+    border: 3px solid;
+    margin-top: 5px;
+    border-color: #FFF9F2;
+    height: 40px;
+}
+.menu_button {
+    margin-left: 10px;
+}

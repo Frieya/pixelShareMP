@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+.wrapperCreate {
+    position: absolute;
+    height: 450px;
+    top: 20%;
+    /* left: 8%; */
+    transform: translate(-50% -50%);
+    width: 1150px;
+    display: flex;
+}
+
+.wrapperCreate .left {
+    height: 80%;
+    background-color: #c5c5c5;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    color: #fff;
+    box-sizing: none;
+}
+
+.left label{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-left: 10px;
+    color:#5f370f;
+    font-size: xx-large;   
+    border-style: dotted;
+    width: -webkit-fill-available;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.left p {
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #555454;
+    font-size: large
+}
+
+.left .publish {
+    margin: 0;
+    position: absolute;
+    left: 13%;
+    width: 120px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    color: #948C5D;
+}
+
+.wrapperCreate .right {
+   width: 650px;
+   background-color: #fff;
+   margin-left: 30px;
+   border-radius: 20px;
+   padding: 20px 10px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.right h3{
+    margin-left: 20px;
+    color:#948C5D ;
+}
+
+.right .title input{
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 3px solid #636261;
+    
+}
+.right .title ::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.right .description ::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.right .destlink ::placeholder{
+    font-family: 'Roboto', sans-serif;
+    color: #949494;
+    font-size: 20px;
+}
+
+.right .author{
+    display: flex;
+}
+
+.right .name {
+    margin-top: 20px;
+    color: #5f370f;
+}
+
+.right img {
+    width: 60px;
+    border-radius: 50px;
+    margin: 10px 20px;
+}
+
+.right .description {
+    margin: 10px 20px;
+}
+
+.right .description input{
+    border: none;
+    width: 600px;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #636261 ;
+}
+
+.right .destlink {
+    margin: 80px 20px;
+}
+.right .destlink input{
+    border: none;
+    width: 600px;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b9b9a ;
+}
+

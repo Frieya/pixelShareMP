@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+
+.wrapperInfo {
+    position: absolute;
+    height: 450px;
+    /* top: 20%; */
+    /* left: 5%; */
+    transform: translate(-50% -50%);
+    width: 1200px;
+    display: flex;
+    
+
+}
+
+.wrapperInfo .leftInfo {
+    width: 15%;
+    height: 70%;
+    background-color: #948C5D;
+    padding: 30px 100px;
+    border-radius: 15px;
+    color: #fff;
+    
+}
+
+
+
+.wrapperInfo .leftInfo img {
+    border: 8px solid #FFF9F2;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+}
+
+.wrapperInfo .leftInfo button {
+    width: 150px;
+    margin-left: 19px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    color: #76522D;
+    text-align: center;
+
+}
+
+.wrapperInfo .leftInfo .logout {
+    width: 100px;
+    margin-top: 70px;
+    margin-left: -80px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    color: #76522D;
+    text-align: center;
+
+}
+
+.wrapperInfo h3{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #76522D;
+    position: relative;
+}
+
+.wrapperInfo .right{
+    margin-left: 20px;
+    display: flex;
+    width: 65%;
+    background-color: #E3E3E3;
+    border-radius: 15px;
+    padding: 30px 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapperInfo .right .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: calc(100% / 2 - 20px)
+}
+
+.user-details .input-box input {
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #948C5D;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus, 
+.user-details .input-box input:valid {
+    border-color: #948C5D;
+}
+
+.user-details .input-box .details {
+   color: #948C5D;
+   margin-bottom: 200px;
+}
+
+input[type=submit]{
+    width: 80px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'League Spartan', sans-serif;
+    color: #fff0e1;
+    font-size: 25px;
+    background-color: #76522D;
+}   
+
+.profile_pic{
+    border-radius: 50%;
+    border: 3px solid;
+    margin-top: 5px;
+    border-color: #FFF9F2;
+    height: 40px;
+}

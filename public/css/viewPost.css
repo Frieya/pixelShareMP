@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+.wrapperView .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+.wrapperView p {
+    margin-bottom: 0;
+}
+
+.wrapperView {
+    border-radius: 15px;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    position: absolute;
+    height: 80%;
+    top: 17%;
+    left: 5%;
+    margin-left: 8%;
+    transform: translate(-50% -50%);
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  
+}
+
+.wrapperView .left {
+
+    
+    height: 100%;width: 50%;/* margin: 30px 0px; */
+    display: flex;align-self: center;border-radius: 15px;
+justify-content: center;}
+
+
+.wrapperView .left div {
+    justify-content: center;display: flex;height: auto;width: auto;margin: 5%;
+}
+
+
+ .left img {
+    height: 90%;
+    width: 90%;
+/* margin: 0px 30px; */border: 1px solid transparent;border-radius: 3%;}
+
+
+
+.wrapperView .rightView{
+   
+    width: 50%;
+    background-color: #E3E3E3;
+    border-radius: 15px;
+    padding: 30px 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.rightView h1 {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #76522D;
+}
+
+
+
+.rightView .follower {
+    font-size: 15px;
+    color: #808080;
+}
+
+.rightView h4 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #76522D;
+}
+
+.rightView h3{
+    margin-top: 10px;
+    display: flex;
+    color: #4e4e4e;
+    font-style: italic;
+    font-family: 'Roboto Slab', serif;
+text-decoration: inherit;}
+
+.rightView .avatar{
+    border-radius: 50%;
+    border: 1px solid;
+    margin-top: 5px;
+    border-color: #e3e3e3;
+    height: 40px;
+}
+
+.profile_pic{
+    border-radius: 50%;
+    border: 3px solid;
+    margin-top: 5px;
+    border-color: #FFF9F2;
+    height: 40px;
+}
+
+.rightView .comments {
+    display: flex;
+}
+
+.name {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.comm {
+    margin-top: 5px;
+    margin-left: 10px;
+font-size: 15px;}
+
+.reply {
+    font-size: 15px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.reply .date{
+    color: #808080;
+}
+.reply a{
+    /* margin-left: 20px; */
+    text-decoration: none;
+    color: #76522D;
+}
+
+.reply img {
+    height: 30px;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+.author{
+    display: flex;
+}
+
+.author button{
+    margin-left: 200px;
+    /* position: absolute; */right: 8%;margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    border-color: #E3E3E3;
+    background-color: #d1af7b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.rightView .see {
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+    border-color: #c2c2c2;
+    font-size: medium;
+    background-color: #c2c2c2;
+    margin-top: 10px;
+    border: 0ch;
+}
+
+.add-comm {
+    display: flex;
+    margin-top: 15px;
+}
+.add-comm img{
+    height: 40px;
+}
+
+.add-comm input {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 0ch;
+    font-size: medium;
+margin-left: 10px;}
+
+.down {
+    position: absolute;
+    right: 3%;
+    margin-top: 10px;
+/* margin-rightView: 3%; *//* left: 0; *//* display: flex; */}
+
+.down button {
+    width: 80px;
+    height: 30px;
+    border-radius:15px;
+    margin-left: 10px;
+    border: 0ch;
+    color: #76522D;
+    text-decoration: solid;
+    font-weight: bold;
+    background-color: #c9c9c9;
+    font-size: 15px;
+}
+
+
+.fav {
+    display: flex;
+}
+
+.fav .add{
+    border-radius: 25px;
+    width: 140px;
+    background-color: #76522D;
+    margin-bottom: 10px;
+    border-style: none;
+    text-align: inherit;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 20px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.fav a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: #76522D;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+
+
