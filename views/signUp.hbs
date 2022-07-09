@@ -58,7 +58,7 @@
                 <h1 id="app_name"> LOGO </h1>
                 <form action="/signup" method="post" enctype="application/x-www-form-urlencoded">
                     <input class="textbox" name="name" type="name" id="name" placeholder=" Name" required/> <br>
-                    <input class="textbox" name="email" type="text" id="email" placeholder=" Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required/> <br>
+                    <input class="textbox" name="email" type="text" id="email" placeholder=" Email" pattern="/[a-z0-9!#$%&'*+\=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gm" required/> <br>
                     <input class="textbox" name="password" type="password" id="password" placeholder=" Password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" onchange="form.password2.pattern = String(this.value).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&');" required/> <br>
                      <input class="textbox" name="password2" type="password" id="password2" placeholder=" Confirm Password"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required/> <br>
                     <input id="button" class="btn_addpost btn btn-outline-dark" type="submit" value="SIGN UP"/>
