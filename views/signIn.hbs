@@ -33,7 +33,7 @@
                             <input type="test"  class="inputbox" name="email" placeholder="EMAIL ADDRESS" id="clientUsername" pattern="[a-z0-9!#$%&'*+\=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
                         </div>
                         <div class="txtbox">
-                            <input type="password" class="inputbox" name="password" placeholder="PASSWORD" id="clientPassword" pattern="^(?=.*[A-Za-z])(?=.*/d)(?=.*[@$!%*#?&])[A-Za-z/d@$!%*#?&]{8,}$" required>
+                            <input type="password" class="inputbox" name="password" placeholder="PASSWORD" id="clientPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
                         </div>
                         
                         <p id="error" style="text-align:center;color:red">{{error}}</p>
