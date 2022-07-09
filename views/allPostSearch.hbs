@@ -1,0 +1,69 @@
+{{>header user}}
+<h4 style="text-align:center;color: #76522d;">Search Result for the term "{{searchIndex}}"</h4>
+<div id="mainContent">
+
+
+            
+            <div id="imageContent">
+
+                <div id="row1" class="row_post">
+                    {{#each postOne}}
+                    <div class="posts">
+                        <div class="post_box">
+                            <a href="/post/{{item._id}}"><img class="post_img" src="../images/post/{{item.postImg}}" alt=""></a>
+                            <div class="img_info">
+                                <p class="nunito">{{item.postTitle}}</p>
+                                <div class="OP">
+                                    <img class="imageOP" src="../images/profilePicture/{{item.user.userImg}}" alt="">
+                                    <p class="nunito color_brown">{{item.user.full_name}}</p>
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    {{/each}}
+                    
+                    
+
+                </div>
+                
+                <div id="row2" class="row_post">
+                    {{#each postTwo}}
+                    <div class="posts">
+                        <div class="post_box">
+                            <a href="/post/{{item._id}}"><img class="post_img" src="../images/post/{{item.postImg}}" alt=""></a>
+                            <div class="img_info">
+                                <p class="nunito">{{item.postTitle}}</p>
+                                <div class="OP">
+                                    <img class="imageOP" src="../images/profilePicture/{{item.user.userImg}}" alt="">
+                                    <p class="nunito color_brown">{{item.user.full_name}}</p>
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    {{/each}}
+           
+                </div>
+
+                <div id="row3" class="row_post">
+
+                    {{#each postThree}}
+                    <div class="posts">
+                        <div class="post_box">
+                            <a href="/post/{{item._id}}"><img class="post_img" src="../images/post/{{item.postImg}}" alt=""></a>
+                            <div class="img_info">
+                                <p class="nunito">{{item.postTitle}}</p>
+                                <div class="OP">
+                                    <img class="imageOP" src="../images/profilePicture/{{item.user.userImg}}" alt="">
+                                    <p class="nunito color_brown">{{item.user.full_name}}</p>
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+           
+</div>

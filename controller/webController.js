@@ -2,6 +2,7 @@
 const { default: mongoose } = require('mongoose');
 const path = require('path');
 const  db  = require('../model_db/db');
+const Fuse = require('fuse.js')
 
 //models
 const Post = require("../model_db/postModel")
@@ -157,6 +158,27 @@ const controller = {
               }
             }
           });
+    },
+    getSearch: async(req, res)=>{
+        var postArr =  await Post.find({}).populate('user', 'full_name userImg').lean().exec()
+        const fuse = new Fuse(postArr, {threshold: 0.3, keys: ["postTitle"]});
+        var returnArr = fuse.search(req.params.searchIndex)
+        const chunks = [[],[],[]];
+        var num = 0;
+        console.log(returnArr)
+        for (let index = 0; index < returnArr.length; index++) {
+            chunks[num].push(returnArr[index])
+            if (num==2){
+                num=0
+            }
+            else{num = num +1}
+            
+        }
+        var firstThree = chunks[0]
+        var middleThree = chunks[1]
+        var secondThree = chunks[2]
+        console.log(firstThree)
+        res.render('allPostSearch', {user: req.user, postOne: firstThree, postTwo: middleThree, postThree: secondThree,searchIndex: req.params.searchIndex})
     }
 
 }

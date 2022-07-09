@@ -36,5 +36,5 @@ route.get('/post/:id/delete', controller.postDelete)
 route.get('/comment/:id/delete', controller.commentDelete)
 
 route.post('/api/changePassword', controller.changePass)
-
+route.get('/search/:searchIndex', controller.getSearch)
 module.exports = route;
