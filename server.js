@@ -47,7 +47,7 @@ app.use(session({
     resave: false,      
     saveUninitialized: false, 
     store: new storeMongo({
-        url: 'mongodb+srv://admin:qfR8QDbzrrqTLFhZ@cluster0.5wpivqh.mongodb.net/?retryWrites=true&w=majority'
+        uri: 'mongodb+srv://admin:qfR8QDbzrrqTLFhZ@cluster0.5wpivqh.mongodb.net/?retryWrites=true&w=majority'
     }),   
     
 }));
