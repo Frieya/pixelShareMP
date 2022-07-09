@@ -41,16 +41,11 @@ app.use(flash());
 const serverRoute = require('./routers/serverRoute');
 const authorizeRoute = require('./routers/authorizeRoute');
 
-const storeSession = new storeMongo({
-    url: process.env.DATABASE_URL,
-    collection: 'sessions'
-})
 
 app.use(session({
     secret:"ccapdev2022",       
     resave: false,      
-    saveUninitialized: false, 
-    store: storeSession,   
+    saveUninitialized: false   
     
 }));
 
