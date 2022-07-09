@@ -24,6 +24,6 @@ git clone https://github.com/Frieya/pixelShareMP.git
 
 5. We may now run our server. To do this, we run the command `node server.js`. Upon running the command, your Command Prompt should display the following statement:
 ```
-App listens at port 1703
+App listens at port 3000
 Connected to: mongodb://localhost:27017/pixel_share
 ```
