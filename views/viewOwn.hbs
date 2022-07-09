@@ -3,7 +3,7 @@
 <div class="wrapperView">
             <div class="left">
                 <div >
-                    <img src="..\images\post/{{post.postImg}}" alt="Avatar" class="avatar">
+                    <img src="../images/post/{{post.postImg}}" alt="Avatar" class="avatar">
                 </div>
                 
             </div>
@@ -36,7 +36,7 @@
             <div class="comments" id="commentBox" style="height:200px;overflow:auto;">
              {{#each post.comments}}
                 <div class="indivComment" style="display:flex;height:fit-content">
-                    <img src="..\images\profilePicture/{{this.user.userImg}}" alt="Profile" class="avatar">
+                    <img src="../images/profilePicture/{{this.user.userImg}}" alt="Profile" class="avatar">
                     <table>
                         <tr>
                             <td>
@@ -79,7 +79,7 @@
                     <table style="width:100%;">
                     <tr style="width:100%">
                         <td class="add-comm">
-                            <img src="..\images\profilePicture/{{active_user.userImg}}" alt="Profile" class="avatar">
+                            <img src="../images/profilePicture/{{active_user.userImg}}" alt="Profile" class="avatar">
                             <input type="text" name="comment" id="comment" placeholder="Add a comment">
                         </td>
                     </tr>
