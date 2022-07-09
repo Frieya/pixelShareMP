@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 
-const url = 'mongodb://localhost:27017/pixel_share';
+const url = process.env.DATABASE_URL;
 
 const options = {
     useUnifiedTopology: true,

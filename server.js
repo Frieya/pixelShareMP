@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV!= 'production'){
+    require('dotenv').config()
+}
+
 //imports frameworks/libraries
 const express = require('express');
 const exphbs = require('express-handlebars');
@@ -13,7 +17,7 @@ const fetch = require('node-fetch');
 const flash = require('connect-flash');
 //express app
 const app = express();
-const PORT = 1703;
+const portOne = process.env.PORT || 1703;
 
 //engine "hbs"
 app.engine('hbs', exphbs.engine({
@@ -93,6 +97,6 @@ app.use('/', serverRoute);
 app.use('/', authorizeRoute);
 
 //listening to the port provided
-app.listen(PORT, function(){
-    console.log('App listens at port ' + PORT);
+app.listen(portOne, function(){
+    console.log('App listens at port ' +  portOne);
 })
