@@ -17,7 +17,7 @@ const fetch = require('node-fetch');
 const flash = require('connect-flash');
 //express app
 const app = express();
-const portOne = process.env.PORT || 1703;
+const PORT = process.env.PORT || 3000;
 
 //engine "hbs"
 app.engine('hbs', exphbs.engine({
@@ -42,7 +42,7 @@ const serverRoute = require('./routers/serverRoute');
 const authorizeRoute = require('./routers/authorizeRoute');
 
 const storeSession = new storeMongo({
-    url: 'mongodb://localhost:27017/pixel_share',
+    url: process.env.DATABASE_URL,
     collection: 'sessions'
 })
 
@@ -67,6 +67,7 @@ hbs.handlebars.registerHelper('isActiveUser', function(isUser, user){
 
 //passport Auth
 const User = require('./model_db/userModel');
+const { prototype } = require('stream');
 
 
 
@@ -97,6 +98,6 @@ app.use('/', serverRoute);
 app.use('/', authorizeRoute);
 
 //listening to the port provided
-app.listen(portOne, function(){
-    console.log('App listens at port ' +  portOne);
+app.listen(PORT, function(){
+    console.log('App listens at port ' +  PORT);
 })
