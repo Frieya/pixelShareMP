@@ -9,20 +9,22 @@ const passportLocal = require('passport-local')
 const storeMongo = MongoDBStore = require('connect-mongodb-session')(session);
 const fileupload = require('express-fileupload')
 const handlebars = require('handlebars')
+const fetch = require('node-fetch');
+const flash = require('connect-flash');
 //express app
 const app = express();
 const PORT = 1703;
 
 //engine "hbs"
 app.engine('hbs', exphbs.engine({
-    extname: "hbs",
+    extname: ".hbs",
     defaultView: 'main',
     layoutsDir:  path.join(__dirname, 'views/layouts'),
     partialDir: path.join(__dirname, 'views/partials')
 }));
 
 //setting engine to hbs
-app.set('view engine', 'hbs');
+app.set('view engine', '.hbs');
 
 //config for api handling
 app.use(express.urlencoded({ extended: true}));
@@ -30,7 +32,7 @@ app.use(express.json());
 //config to load static files
 app.use(express.static('public'));
 app.use(fileupload())
-
+app.use(flash());
 //routes
 const serverRoute = require('./routers/serverRoute');
 const authorizeRoute = require('./routers/authorizeRoute');
@@ -50,7 +52,13 @@ app.use(session({
 
 db.connect()
 
+var hbs = exphbs.create({})
 
+hbs.handlebars.registerHelper('isActiveUser', function(isUser, user){
+    userOne = isUser.toString()
+    userTwo = user.toString()
+    return userOne==userTwo
+})
 
 
 //passport Auth

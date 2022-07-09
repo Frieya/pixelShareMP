@@ -84,7 +84,8 @@ justify-content: center;}
     color: #4e4e4e;
     font-style: italic;
     font-family: 'Roboto Slab', serif;
-text-decoration: inherit;}
+text-decoration: inherit;
+    font-size: larger;}
 
 .rightView .avatar{
     border-radius: 50%;
@@ -103,7 +104,7 @@ text-decoration: inherit;}
 }
 
 .rightView .comments {
-    display: flex;
+    
 }
 
 .name {
@@ -207,13 +208,12 @@ margin-left: 10px;}
 
 .fav .add{
     border-radius: 25px;
-    width: 140px;
+    width: 100px;
     background-color: #76522D;
     margin-bottom: 10px;
     border-style: none;
     text-align: inherit;
     margin-top: 10px;
-    padding: 5px;
     margin-right: 20px;
     height: 30px;
     font-family: 'Roboto', sans-serif;

@@ -1,5 +1,37 @@
 
 <link rel="stylesheet" href="/css/signUpPage.css">
+<script>
+    $(document).ready(function () {
+        const email = document.getElementById("email");
+    console.log(email);
+    email.addEventListener("input", function (event) {
+        if (email.validity.patternMismatch){
+            email.setCustomValidity("Please provide a valid email e.g john@gmail.com");
+        }
+        else{
+            email.setCustomValidity("")
+        }
+    })
+    const pass = document.getElementById("password");
+    pass.addEventListener("input", function (event) {
+        if (pass.validity.patternMismatch){
+            pass.setCustomValidity("Minimum eight characters, at least one letter, one number and one special character");
+        }
+        else{
+            pass.setCustomValidity("")
+        }
+    })
+    const pass2 = document.getElementById("password2");
+    pass2.addEventListener("input", function (event) {
+        if (pass2.validity.patternMismatch){
+            pass2.setCustomValidity("Please enter the same password as above");
+        }
+        else{
+            pass2.setCustomValidity("")
+        }
+    })
+    })
+</script>
         <style>
 
             .btn_addpost{
@@ -25,9 +57,10 @@
                 <h1 id="welcome"> WELCOME TO </h1>
                 <h1 id="app_name"> LOGO </h1>
                 <form action="/signup" method="post" enctype="application/x-www-form-urlencoded">
-                    <input class="textbox" name="name" type="name" id="name" placeholder=" NAME" /> <br>
-                    <input class="textbox" name="email" type="email" id="email" placeholder=" EMAIL" /> <br>
-                    <input class="textbox" name="password" type="password" id="password" placeholder=" PASSWORD" /> <br>
+                    <input class="textbox" name="name" type="name" id="name" placeholder=" Name" required/> <br>
+                    <input class="textbox" name="email" type="text" id="email" placeholder=" Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required/> <br>
+                    <input class="textbox" name="password" type="password" id="password" placeholder=" Password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" onchange="form.password2.pattern = String(this.value).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&');" required/> <br>
+                     <input class="textbox" name="password2" type="password" id="password2" placeholder=" Confirm Password"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required/> <br>
                     <input id="button" class="btn_addpost btn btn-outline-dark" type="submit" value="SIGN UP"/>
                 </form>
                

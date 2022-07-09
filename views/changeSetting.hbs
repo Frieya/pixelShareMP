@@ -1,4 +1,46 @@
         {{>header user}}
+
+        <script>
+        $(document).ready(function () {
+        const email = document.getElementById("email");
+   
+    email.addEventListener("input", function (event) {
+        if (email.validity.patternMismatch){
+            email.setCustomValidity("Please provide a valid email e.g john@gmail.com");
+        }
+        else{
+            email.setCustomValidity("")
+        }
+    })
+    const old = document.getElementById("old_password");
+    old.addEventListener("input", function (event) {
+        if (old.validity.patternMismatch){
+            old.setCustomValidity("Minimum eight characters, at least one letter, one number and one special character");
+        }
+        else{
+            old.setCustomValidity("")
+        }
+    })
+    const pass = document.getElementById("new_password");
+    pass.addEventListener("input", function (event) {
+        if (pass.validity.patternMismatch){
+            pass.setCustomValidity("Minimum eight characters, at least one letter, one number and one special character");
+        }
+        else{
+            pass.setCustomValidity("")
+        }
+    })
+    const pass2 = document.getElementById("conf_password");
+    pass2.addEventListener("input", function (event) {
+        if (pass2.validity.patternMismatch){
+            pass2.setCustomValidity("Please enter the same password as above");
+        }
+        else{
+            pass2.setCustomValidity("")
+        }
+    })
+    })
+        </script>
         <div style="display:flex;justify-content:center;margin-top:5%;">
             <div class="wrapperInfo">
                 <div class="leftInfo">
@@ -12,7 +54,7 @@
                     <button class="button" type="submit"><b>UPLOAD PHOTO</b></button>
                     </form>
                     <button class="logout">
-                        <a href="startPage.html" style="text-decoration: none; color: #76522D;">Log Out</a>
+                        <a href="/logout" style="text-decoration: none; color: #76522D;">Log Out</a>
                     </button>
     
                 </div>
@@ -25,46 +67,46 @@
     
                               <div class="input-box">
                                   <span class="details">Full Name</span>
-                                  <input type="text" name="full_name" value="{{user.full_name}}">
+                                  <input type="text" id="fullName" name="full_name" value="{{user.full_name}}" required>
                               </div>
     
                               <div class="input-box">
                                 <span class="details"> Email (Username)</span>
-                                <input type="text" name="username" value="{{user.username}}">
+                                <input type="text" id="email" name="username" value="{{user.username}}" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
                             </div>
                                 
                           </div>
     
                             <div class="save">
-                                <input type="submit" value="SAVE" onclick="/logout">
+                                <input type="submit" value="SAVE">
                             </div>
     
                        </form>
 
 
-                       <form action="#" method="post">
+                       <form action="/api/changePassword" method="post" id="changePassForm">
                           <div class="user-details">
 
                               <div class="input-box">
                                 <span class="details">Old Password</span>
-                                <input type="text" id="username" name="oldPassword">
+                                <input type="password" id="old_password" name="oldPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"required>
                                 </div>
 
                                 <div class="input-box">
                                     <span class="details">New Password</span>
-                                    <input type="password" id="password" name="newPassword">
+                                    <input type="password" id="new_password" name="newPassword"   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" onchange="form.conf_password.pattern = String(this.value).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&');" required>
                                 </div>
 
                                 <div class="input-box">
                                     <span class="details">Confirm Password</span>
-                                    <input type="password" id="conf_password" name="confirmPassword">
+                                    <input type="password" id="conf_password" name="confirmPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"required>
                                 </div>
 
 
                           </div>
 
                             <div class="save">
-                                <input type="submit" value="SAVE">
+                                <input type="submit" id="passwordButton" value="SAVE">
                             </div>
 
                        </form>

@@ -1,4 +1,5 @@
-{{>header activeUser}}
+{{>header active_user}}
+
 <div class="wrapperView">
             <div class="left">
                 <div >
@@ -15,61 +16,96 @@
             
             <div class="author">
                 <div>
-                <h3>-{{post.user.full_name}}</h3>
-                <p class="follower"> 20.2K Followers</p>
+                <a href="/profile/{{post.user._id}}">
+                    <h3>-{{post.user.full_name}}</h3>
+                </a>
+                
                 </div>
 
             </div>
-
-
-
+            {{#if (isActiveUser active_user._id post.user._id)}}
+                <div class="fav">
+                    <button class="add" id="deleteButton"><b>Delete</b></button>
+                </div>
+            {{/if}}
+            
+            
             <h4>COMMENTS</h4>
+           
+            
+            <div class="comments" id="commentBox" style="height:200px;overflow:auto;">
+             {{#each post.comments}}
+                <div class="indivComment" style="display:flex;height:fit-content">
+                    <img src="..\images\profilePicture/{{this.user.userImg}}" alt="Profile" class="avatar">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="name"><b>{{this.user.full_name}}</b></p>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="comm">{{this.comment}}</p>
+                            </td>
+                        </tr>
+                        <tr class="reply">
+                            <td>
+                                <p class="date">{{this.date}}</p>
+                            </td>
+                            <td style="margin:0 10px">
 
-            <div class="comments">
-                <img src="..\images\profilePicture\image.png" alt="Profile" class="avatar">
-                <table>
-                    <tr>
-                        <td>
-                            <p class="name"><b>randomuser</b></p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="comm">This anime is so heart warming</p>
-                        </td>
-                    </tr>
-                    <tr class="reply">
-                        <td>
-                            <p class="date">3mos</p>
-                        </td>
-                        <td style="margin:0 10px">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                              </svg>
-                        </td>
-                    </tr>
-                </table>  
+                                    <button id="deleteComment" style="border-radius:5px; color:#ffffff; background-color :#76522d;border-style:none;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-trash2" viewBox="0 0 16 16">
+                                        <path d="M14 3a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2zM3.215 4.207l1.493 8.957a1 1 0 0 0 .986.836h4.612a1 1 0 0 0 .986-.836l1.493-8.957C11.69 4.689 9.954 5 8 5c-1.954 0-3.69-.311-4.785-.793z"/>
+                                        </svg>
+                                    </button>
+                                    <p id="commentpost_id" hidden>{{this._id}}</p>
+                                    
+                            </td>
+                        </tr>
+                    </table>  
+                </div>
+                {{/each}}
+             
+
+                
             </div>
 
-            <button class="see"><b>See More</b></button>
 
             <div>
-                <table style="width:100%;">
+            
+                    <input type="hidden" name="post_id" id="post_id" value="{{post._id}}">
+                    <table style="width:100%;">
                     <tr style="width:100%">
                         <td class="add-comm">
-                            <img src="..\images\profilePicture/{{activeUser.userImg}}" alt="Profile" class="avatar">
-                            <input type="text" placeholder="Add a comment">
+                            <img src="..\images\profilePicture/{{active_user.userImg}}" alt="Profile" class="avatar">
+                            <input type="text" name="comment" id="comment" placeholder="Add a comment">
                         </td>
                     </tr>
                     <tr>
                         <td class="down">
-                            <button>Cancel</button>
-                            <button style="color: rgb(110, 110, 110);">Done</button>
+                            <button style="color: rgb(110, 110, 110);" name="submit" id="submit">Post</button>
                         </td>
                     </tr>
                 </table>
+    
+                
             </div>
             
            </div>          
+</div>
+ <div id="promptLayer">
+            <div class="promptDelete">
+                <h2>Delete Post?</h2>
+                <div>
+                    <p>This action cannot be undone and it will be remove from your profile and any page from this site thereon.</p>
+                </div>
+                <div class="d-grid gap-3 col-9 mx-auto">
+                    <button id="continueDelete" type="button" class="btn btn-outline-danger">Continue</button>
+                    <button id="cancelDelete" type="button" class="btn btn-outline-dark">Cancel</button>
+                </div>
+               
+                    
+            </div>
 </div>

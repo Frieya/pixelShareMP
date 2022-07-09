@@ -18,12 +18,12 @@
         <div id="mainContentProfile">
             <div id="profileContent">
                <div style="display: flex; justify-content: center;">
-                   <img class="profile_img" src="../images\profilePicture/{{user.userImg}}" alt="">
+                   <img class="profile_img" src="../images\profilePicture/{{profileuser.userImg}}" alt="">
                </div>
                
                <div style="margin-top: 10px;">
                    <div class="infoBox">
-                        <h1 id="accountName">{{user.full_name}}</h1>
+                        <h1 id="accountName">{{profileuser.full_name}}</h1>
                    </div>
                    <div class="infoBox">
                         <p id="userDescription"></p>
@@ -41,7 +41,7 @@
                           </svg>
                           <span  style="font-size: 15px; font-weight: BOLD;">CREATE POST</span>
                            
-                    </button></a>
+                    </button>
                 </div>
                 
                 
@@ -65,9 +65,6 @@
                                     <img class="post_img" src="..\images\post/{{this.postImg}}" alt="">
                                     <a href="/post/{{this._id}}">
                                     <div class="img_shadeProfile" id="img_shade"></div>
-                                    <svg class="optionButton" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16" >
-                                        <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
-                                    </svg>
                                     </a>
                                 </div> 
                             </div>
@@ -82,9 +79,6 @@
                                     <img class="post_img" src="..\images\post/{{this.postImg}}" alt="">
                                     <a href="/post/{{this._id}}">
                                     <div class="img_shadeProfile" id="img_shade"></div>
-                                    <svg class="optionButton" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16" >
-                                        <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
-                                    </svg>
                                     </a>
                                 </div> 
                             </div>
