@@ -45,7 +45,10 @@ const authorizeRoute = require('./routers/authorizeRoute');
 app.use(session({
     secret:"ccapdev2022",       
     resave: false,      
-    saveUninitialized: false   
+    saveUninitialized: false, 
+    store: new storeMongo({
+        url: process.env.DATABASE_URL
+    }),   
     
 }));
 
