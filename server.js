@@ -47,7 +47,7 @@ app.use(session({
     resave: false,      
     saveUninitialized: false, 
     store: new storeMongo({
-        url: process.env.DATABASE_URL
+        url: 'mongodb+srv://admin:qfR8QDbzrrqTLFhZ@cluster0.5wpivqh.mongodb.net/?retryWrites=true&w=majority'
     }),   
     
 }));
